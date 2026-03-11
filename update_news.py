@@ -1,34 +1,32 @@
 import os
-import urllib.request
-import xml.etree.ElementTree as ET
 from google import genai
 from google.genai import types
+from duckduckgo_search import DDGS
 
 # 1. Setup Gemini API Client
 api_key = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 
-# 2. Fetch raw news, actively filtering OUT the word "strike" using Google search operators
-print("Fetching raw news data...")
-url = "https://news.google.com/rss/search?q=UK+school+(closure+OR+merger+OR+VAT+OR+deficit+OR+independent)+-strike+-strikes+-weather&hl=en-GB&gl=GB&ceid=GB:en"
-req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-response = urllib.request.urlopen(req)
-root = ET.fromstring(response.read())
+# 2. Use DuckDuckGo to scrape the live web for clean, regional news (Past 7 Days)
+print("Scraping the web for fresh news...")
+results = DDGS().news(
+    keywords="UK school closure OR merger OR deficit OR VAT", 
+    region="uk-en", 
+    timelimit="w", # Strictly limits to the past week
+    max_results=25
+)
 
 news_items = []
-# Grab the top 25 articles to give Gemini a wide pool of data
-for item in root.findall('.//item')[:25]: 
-    title = item.find('title').text
-    link = item.find('link').text
-    pubDate = item.find('pubDate').text
-    news_items.append(f"Title: {title}\nDate: {pubDate}\nLink: {link}")
+for res in results:
+    # We grab the clean URL, the exact date, and the specific snippet
+    news_items.append(f"Title: {res['title']}\nDate: {res['date']}\nSource: {res['source']}\nLink: {res['url']}\nSnippet: {res['body']}")
 
 news_text = "\n\n".join(news_items)
 
-# 3. Your updated prompt with strict exclusions
+# 3. Your strict prompt
 prompt = f"""Role: Act as a specialist market researcher for the UK independent education sector.
 
-Task: I am providing you with a list of recent UK school news articles. Read through them and select the 5 most important stories. While the main focus should be on news that interests the independent (private) school sector, highly relevant news regarding state schools should also be included.
+Task: I am providing you with a list of recent UK school news articles scraped from the web. Read through them and select the 5 most important stories. While the main focus should be on news that interests the independent (private) school sector, highly relevant news regarding state schools should also be included.
 
 STRICT EXCLUSIONS: You MUST ignore any news about temporary closures. Do NOT include closures due to strikes, industrial action, weather, or short-term emergencies. 
 
@@ -38,7 +36,7 @@ Focus Areas: Prioritise news involving PERMANENT operational and structural chan
 - Severe financial pressures, major deficits, or significant fee restructuring
 - Major leadership changes or structural overhauls
 
-Language Requirement: All responses must be written in standard British English spelling and grammar (e.g., categorise, programme, centre).
+Language Requirement: All responses must be written in standard British English spelling and grammar.
 
 Output Formatting Rules:
 - Provide only the results formatted as a valid JSON array.
@@ -47,7 +45,7 @@ Output Formatting Rules:
 - "Headline": Must be short and concise. It must start with a relevant category tag (e.g., "Closure - ", "Merger - ", "Financial - ", "News - "), followed by the school name, and must include a suitable geographic location (e.g., city or county). Indicate if it is a state school if applicable.
 - "Date": The publication date of the news article, written in a standard British date format (e.g., 10 March 2026).
 - "Info": A 1-2 sentence summary providing slightly more detail on the core event (e.g., mention the deficit amount, pupil numbers, or VAT impact if applicable).
-- "Link": Use the exact URL provided in the raw data.
+- "Link": Use the exact URL provided in the raw data. Do NOT alter the URL.
 
 Here is the raw news data to analyze:
 {news_text}
@@ -60,7 +58,7 @@ response = client.models.generate_content(
     model='gemini-2.5-flash',
     contents=prompt,
     config=types.GenerateContentConfig(
-        temperature=0.1 # Lowered slightly to make it even more strictly compliant with your rules
+        temperature=0.1 
     )
 )
 
