@@ -19,6 +19,7 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests google-genai
+        run: pip install requests google-genai duckduckgo-search
 
       - name: Run Python script
         env:
