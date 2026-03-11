@@ -35,7 +35,7 @@ print("Sending prompt to Gemini with Live Search enabled...")
 # 3. Configure the model with Google Search Grounding correctly formatted
 model = genai.GenerativeModel(
     model_name='gemini-2.5-flash',
-    tools='google_search_retrieval' # Fixed: This is the correct flag for the stable Python SDK
+    tools='google_search' 
 )
 
 # Request the generation
