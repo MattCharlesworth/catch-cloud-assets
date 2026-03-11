@@ -1,7 +1,6 @@
 import os
-import urllib.parse
-import urllib.request
-import xml.etree.ElementTree as ET
+import json
+import requests
 from google import genai
 from google.genai import types
 
@@ -9,76 +8,45 @@ from google.genai import types
 api_key = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 
-# 2. The "Super-Scraper": Run multiple targeted Google News searches
-print("Running targeted Google News sweeps...")
+# 2. Your exact prompt, using the Web-Chat methodology
+prompt = """Role: Act as a specialist market researcher for the UK independent education sector.
 
-# These specific queries guarantee we catch niche independent/prep school news
-queries = [
-    '"independent school" (closure OR close OR closing OR deficit)',
-    '"independent school" (merger OR merge OR merging)',
-    '"prep school" (closure OR merger OR VAT)',
-    'UK school (closure OR merger) -"strike" -"weather"'
-]
+Task: Search the web using Google Search for news published STRICTLY WITHIN THE LAST 7 DAYS regarding UK schools. While the main focus should be on news that interests the independent (private) school sector, do not strictly limit results to independent schools. Highly relevant news regarding state schools (such as state school closures, capacity issues, or local demographic shifts) should also be included.
 
-news_dict = {}
+Focus Areas: Prioritise news involving operational and structural changes, specifically:
+- School closures or potential closures (both independent and state schools)
+- Mergers, acquisitions, or partnerships
+- Severe financial pressures or significant fee restructuring
+- Major leadership changes or restructuring
 
-# Fetch and combine top results from all 4 searches
-for q in queries:
-    url = "https://news.google.com/rss/search?q=" + urllib.parse.quote(q) + "&hl=en-GB&gl=GB&ceid=GB:en"
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    try:
-        response = urllib.request.urlopen(req)
-        root = ET.fromstring(response.read())
-        for item in root.findall('.//item')[:15]: # Take top 15 from each query
-            title = item.find('title').text
-            link = item.find('link').text
-            pubDate = item.find('pubDate').text
-            # Use link as dictionary key to automatically remove duplicates
-            if link not in news_dict:
-                news_dict[link] = f"Title: {title}\nDate: {pubDate}\nLink: {link}"
-    except Exception as e:
-        print(f"Failed to fetch query '{q}': {e}")
+Source Requirements: Do not limit your search to major national outlets. You must actively search local and regional UK news sites.
 
-# Combine into one massive text block for Gemini (up to 40 unique articles)
-news_text = "\n\n".join(list(news_dict.values())[:40])
-
-# 3. Your prompt, enhanced for stricter formatting
-prompt = f"""Role: Act as a specialist market researcher for the UK independent education sector.
-
-Task: I am providing you with a large master-list of recent UK school news articles. Read through them and select the 5 most important stories. The main focus is the independent (private) school sector, but highly relevant state school news must be included.
-
-STRICT EXCLUSIONS: You MUST ignore temporary closures (e.g., strikes, weather).
-
-Focus Areas (Prioritise PERMANENT changes):
-- Permanent school closures (due to deficit, low numbers, or VAT)
-- Mergers, acquisitions, or partnerships (including cancelled or delayed mergers)
-- Severe financial pressures or major deficits
+Language Requirement: All responses must be written in standard British English spelling and grammar.
 
 Output Formatting Rules:
-- Provide ONLY a valid JSON array. No markdown, no intro/outro text.
-- Each object must have exactly four keys: "Headline", "Date", "Info", "Link".
-- "Headline": Must start with a highly descriptive category tag (e.g., "Closure", "Merger", "Merger Cancelled", "Closure & Merger Delayed"). Then the school name. You MUST append "(State School)" or "(Independent)" to the name. End with the geographic location. 
-  Example: "Closure & Merger Delayed - Flintshire Catholic Schools (State Schools), North Wales"
-- "Date": Standard British date format (e.g., 10 March 2026).
-- "Info": A detailed 1-2 sentence summary containing specific hard facts (e.g., specific deficit amounts, pupil numbers, or VAT impacts).
-- "Link": Use the exact URL provided in the raw data.
-
-Here is the raw news data to analyze:
-{news_text}
+- Provide only the results formatted as a valid JSON array.
+- Absolutely no conversational filler, introductory text, markdown formatting outside of the JSON block, or concluding remarks.
+- DO NOT include any citation markers (e.g., [1], [2]) inside the text.
+- Each result must be a single JSON object within the array containing exactly four keys: "Headline", "Date", "Info", and "Link".
+- "Headline": Must be short and concise. It must start with a relevant category tag (e.g., "Closure - ", "Merger - ", "Financial - ", "News - "), followed by the school name, and must include a suitable geographic location (e.g., city or county). Indicate if it is a state school if applicable.
+- "Date": The publication date of the news article, written in a standard British date format (e.g., 10 March 2026).
+- "Info": A 1-2 sentence summary providing slightly more detail on the core event.
+- "Link": The direct URL to the source article.
 """
 
-print("Sending compiled data to Gemini...")
+print("Sending prompt to Gemini with Live Search enabled...")
 
-# 4. Call the API
+# 3. Call the API using the Live Search tool
 response = client.models.generate_content(
     model='gemini-2.5-flash',
     contents=prompt,
     config=types.GenerateContentConfig(
-        temperature=0.1 
+        tools=[types.Tool(google_search=types.GoogleSearch())],
+        temperature=0.2
     )
 )
 
-# 5. Clean up the output
+# 4. Clean up the output string
 output_text = response.text.strip()
 
 if output_text.startswith("```json"):
@@ -89,6 +57,25 @@ if output_text.endswith("```"):
     output_text = output_text[:-3]
     
 output_text = output_text.strip()
+
+# 5. Clean the ugly Google Tracking URLs automatically
+print("Cleaning up tracking URLs...")
+try:
+    data = json.loads(output_text)
+    for item in data:
+        ugly_url = item.get("Link", "")
+        # If the API gave us an ugly tracking link, we resolve it to the real publisher link
+        if "vertexaisearch.cloud.google.com" in ugly_url or "[google.com/url](https://google.com/url)" in ugly_url:
+            try:
+                r = requests.get(ugly_url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=10)
+                item["Link"] = r.url
+            except Exception:
+                pass # If it fails to unfurl, keep the original link
+    
+    # Re-encode back to formatted text
+    output_text = json.dumps(data, indent=2)
+except Exception as e:
+    print(f"URL cleaning skipped due to JSON parsing error: {e}")
 
 # 6. Overwrite the JSON file
 print("Saving new headlines...")
