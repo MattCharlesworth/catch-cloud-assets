@@ -32,25 +32,24 @@ Output Formatting Rules:
 
 print("Sending prompt to Gemini with Live Search enabled...")
 
-# 3. Configure the model with Google Search enabled
+# 3. Configure the model with Google Search Grounding correctly formatted
 model = genai.GenerativeModel(
     model_name='gemini-2.5-flash',
-    tools=[{"google_search": {}}] # This enables live internet browsing
+    tools='google_search_retrieval' # Fixed: This is the correct flag for the stable Python SDK
 )
 
 # Request the generation
 response = model.generate_content(
     prompt,
     generation_config=genai.types.GenerationConfig(
-        temperature=0.2, # Low temperature to keep the AI highly factual and less "creative"
+        temperature=0.2, # Low temperature keeps it highly factual
     )
 )
 
 # 4. Clean up the output
 output_text = response.text.strip()
 
-# Sometimes the AI adds markdown blocks like ```json ... ``` despite being told not to. 
-# This strips them away so the file remains pure JSON.
+# Strip markdown if Gemini adds it
 if output_text.startswith("```json"):
     output_text = output_text[7:]
 if output_text.startswith("```"):
