@@ -1,23 +1,42 @@
 import os
+import urllib.request
+import xml.etree.ElementTree as ET
 from google import genai
 from google.genai import types
 
-# 1. Setup Gemini API Client using the new SDK
+# 1. Setup Gemini API Client
 api_key = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 
-# 2. Your exact prompt
-prompt = """Role: Act as a specialist market researcher for the UK independent education sector.
+# 2. Fetch raw news, actively filtering OUT the word "strike" using Google search operators
+print("Fetching raw news data...")
+url = "https://news.google.com/rss/search?q=UK+school+(closure+OR+merger+OR+VAT+OR+deficit+OR+independent)+-strike+-strikes+-weather&hl=en-GB&gl=GB&ceid=GB:en"
+req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+response = urllib.request.urlopen(req)
+root = ET.fromstring(response.read())
 
-Task: Search the web for news published strictly within the last 7 days regarding UK schools. While the main focus should be on news that interests the independent (private) school sector, do not strictly limit results to independent schools. Highly relevant news regarding state schools (such as state school closures, capacity issues, or local demographic shifts) should also be included.
+news_items = []
+# Grab the top 25 articles to give Gemini a wide pool of data
+for item in root.findall('.//item')[:25]: 
+    title = item.find('title').text
+    link = item.find('link').text
+    pubDate = item.find('pubDate').text
+    news_items.append(f"Title: {title}\nDate: {pubDate}\nLink: {link}")
 
-Focus Areas: Prioritise news involving operational and structural changes, specifically:
-- School closures or potential closures (both independent and state schools)
-- Mergers, acquisitions, or partnerships
-- Severe financial pressures or significant fee restructuring
-- Major leadership changes or restructuring
+news_text = "\n\n".join(news_items)
 
-Source Requirements: Do not limit your search to major national outlets (e.g., BBC, The Times, Telegraph). You must actively search local and regional UK news sites (e.g., Chronicle Live, regional publishers) and specialist education press (e.g., Independent Education Today, Tes) to capture grassroots sector shifts.
+# 3. Your updated prompt with strict exclusions
+prompt = f"""Role: Act as a specialist market researcher for the UK independent education sector.
+
+Task: I am providing you with a list of recent UK school news articles. Read through them and select the 5 most important stories. While the main focus should be on news that interests the independent (private) school sector, highly relevant news regarding state schools should also be included.
+
+STRICT EXCLUSIONS: You MUST ignore any news about temporary closures. Do NOT include closures due to strikes, industrial action, weather, or short-term emergencies. 
+
+Focus Areas: Prioritise news involving PERMANENT operational and structural changes, specifically:
+- Permanent school closures (e.g., due to deficit, dropping student numbers, or VAT rollout)
+- Mergers, acquisitions, or partnerships (including cancelled or delayed mergers)
+- Severe financial pressures, major deficits, or significant fee restructuring
+- Major leadership changes or structural overhauls
 
 Language Requirement: All responses must be written in standard British English spelling and grammar (e.g., categorise, programme, centre).
 
@@ -27,26 +46,27 @@ Output Formatting Rules:
 - Each result must be a single JSON object within the array containing exactly four keys: "Headline", "Date", "Info", and "Link".
 - "Headline": Must be short and concise. It must start with a relevant category tag (e.g., "Closure - ", "Merger - ", "Financial - ", "News - "), followed by the school name, and must include a suitable geographic location (e.g., city or county). Indicate if it is a state school if applicable.
 - "Date": The publication date of the news article, written in a standard British date format (e.g., 10 March 2026).
-- "Info": A 1-2 sentence summary providing slightly more detail on the core event.
-- "Link": The direct URL to the source article.
+- "Info": A 1-2 sentence summary providing slightly more detail on the core event (e.g., mention the deficit amount, pupil numbers, or VAT impact if applicable).
+- "Link": Use the exact URL provided in the raw data.
+
+Here is the raw news data to analyze:
+{news_text}
 """
 
-print("Sending prompt to Gemini with Live Search enabled...")
+print("Sending curated list to Gemini...")
 
-# 3. Call the API using the new modern configuration
+# 4. Call the API
 response = client.models.generate_content(
     model='gemini-2.5-flash',
     contents=prompt,
     config=types.GenerateContentConfig(
-        tools=[types.Tool(google_search=types.GoogleSearch())],
-        temperature=0.2
+        temperature=0.1 # Lowered slightly to make it even more strictly compliant with your rules
     )
 )
 
-# 4. Clean up the output
+# 5. Clean up the output
 output_text = response.text.strip()
 
-# Strip markdown if Gemini adds it
 if output_text.startswith("```json"):
     output_text = output_text[7:]
 if output_text.startswith("```"):
@@ -56,7 +76,7 @@ if output_text.endswith("```"):
     
 output_text = output_text.strip()
 
-# 5. Overwrite the JSON file
+# 6. Overwrite the JSON file
 print("Saving new headlines...")
 with open('headlines.json', 'w', encoding='utf-8') as f:
     f.write(output_text)
