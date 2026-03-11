@@ -1,9 +1,10 @@
 import os
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
-# 1. Setup Gemini API
+# 1. Setup Gemini API Client using the new SDK
 api_key = os.environ.get("GEMINI_API_KEY")
-genai.configure(api_key=api_key)
+client = genai.Client(api_key=api_key)
 
 # 2. Your exact prompt
 prompt = """Role: Act as a specialist market researcher for the UK independent education sector.
@@ -32,17 +33,13 @@ Output Formatting Rules:
 
 print("Sending prompt to Gemini with Live Search enabled...")
 
-# 3. Configure the model with Google Search Grounding correctly formatted
-model = genai.GenerativeModel(
-    model_name='gemini-2.5-flash',
-    tools='google_search' 
-)
-
-# Request the generation
-response = model.generate_content(
-    prompt,
-    generation_config=genai.types.GenerationConfig(
-        temperature=0.2, # Low temperature keeps it highly factual
+# 3. Call the API using the new modern configuration
+response = client.models.generate_content(
+    model='gemini-2.5-flash',
+    contents=prompt,
+    config=types.GenerateContentConfig(
+        tools=[types.Tool(google_search=types.GoogleSearch())],
+        temperature=0.2
     )
 )
 
