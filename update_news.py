@@ -8,15 +8,19 @@ from google.genai import types
 api_key = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 
-# 2. Your exact prompt, using the Web-Chat methodology
+# 2. Your exact prompt, reinforced with aggressive exclusions for the Pro model
 prompt = """Role: Act as a specialist market researcher for the UK independent education sector.
 
-Task: Search the web using Google Search for news published STRICTLY WITHIN THE LAST 7 DAYS regarding UK schools. While the main focus should be on news that interests the independent (private) school sector, do not strictly limit results to independent schools. Highly relevant news regarding state schools (such as state school closures, capacity issues, or local demographic shifts) should also be included.
+Task: Search the web using Google Search for news published STRICTLY WITHIN THE LAST 7 DAYS regarding UK schools. While the main focus should be on news that interests the independent (private) school sector, highly relevant news regarding state schools (such as permanent state school closures, capacity issues, or local demographic shifts) should also be included.
 
-Focus Areas: Prioritise news involving operational and structural changes, specifically:
-- School closures or potential closures (both independent and state schools)
-- Mergers, acquisitions, or partnerships
-- Severe financial pressures or significant fee restructuring
+CRITICAL EXCLUSIONS - READ CAREFULLY:
+You MUST completely ignore any news about temporary closures. 
+If an article mentions "strike", "strikes", "industrial action", "EIS", "NEU", "teachers union", "weather", "snow", "boiler", or "repairs", you MUST DISCARD IT entirely. Do not include it in the output under any circumstances.
+
+Focus Areas: Prioritise news involving PERMANENT operational and structural changes, specifically:
+- Permanent school closures or potential closures (both independent and state schools) due to finances, deficits, or VAT
+- Mergers, acquisitions, or partnerships (including cancelled/delayed mergers)
+- Severe financial pressures, major deficits, or significant fee restructuring
 - Major leadership changes or restructuring
 
 Source Requirements: Do not limit your search to major national outlets. You must actively search local and regional UK news sites.
@@ -24,25 +28,25 @@ Source Requirements: Do not limit your search to major national outlets. You mus
 Language Requirement: All responses must be written in standard British English spelling and grammar.
 
 Output Formatting Rules:
-- Provide only the results formatted as a valid JSON array.
+- Provide exactly 5 results formatted as a valid JSON array.
 - Absolutely no conversational filler, introductory text, markdown formatting outside of the JSON block, or concluding remarks.
 - DO NOT include any citation markers (e.g., [1], [2]) inside the text.
 - Each result must be a single JSON object within the array containing exactly four keys: "Headline", "Date", "Info", and "Link".
-- "Headline": Must be short and concise. It must start with a relevant category tag (e.g., "Closure - ", "Merger - ", "Financial - ", "News - "), followed by the school name, and must include a suitable geographic location (e.g., city or county). Indicate if it is a state school if applicable.
+- "Headline": Must be short and concise. It must start with a relevant category tag (e.g., "Closure - ", "Merger - ", "Financial - ", "News - "), followed by the school name, and must include a suitable geographic location (e.g., city or county). Append "(State School)" or "(Independent)" to the name.
 - "Date": The publication date of the news article, written in a standard British date format (e.g., 10 March 2026).
-- "Info": A 1-2 sentence summary providing slightly more detail on the core event.
+- "Info": A 1-2 sentence summary providing slightly more detail on the core event. Include hard facts like deficit amounts or pupil numbers.
 - "Link": The direct URL to the source article.
 """
 
-print("Sending prompt to Gemini with Live Search enabled...")
+print("Sending prompt to Gemini Pro with Live Search enabled...")
 
-# 3. Call the API using the Live Search tool
+# 3. Call the API using the Pro model and Live Search tool
 response = client.models.generate_content(
     model='gemini-2.5-pro',
     contents=prompt,
     config=types.GenerateContentConfig(
         tools=[types.Tool(google_search=types.GoogleSearch())],
-        temperature=0.2
+        temperature=0.1 # Very low temperature to force strict compliance
     )
 )
 
@@ -64,7 +68,7 @@ try:
     data = json.loads(output_text)
     for item in data:
         ugly_url = item.get("Link", "")
-        # If the API gave us an ugly tracking link, we resolve it to the real publisher link
+        # If the API gave us an ugly tracking link, resolve it to the real publisher link
         if "vertexaisearch.cloud.google.com" in ugly_url or "[google.com/url](https://google.com/url)" in ugly_url:
             try:
                 r = requests.get(ugly_url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=10)
