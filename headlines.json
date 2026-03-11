@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "Headline": "Closure - Banchory Devenick Primary School, Aberdeenshire (State School)",
+    "Date": "06 March 2026",
+    "Info": "Banchory Devenick Primary School pupils are being temporarily relocated to Fishermoss Primary due to essential boiler and pipework repairs, with parents fearing the move could lead to permanent closure given the estimated \u00a3530,000 repair costs.",
+    "Link": "https://www.pressandjournal.co.uk/fp/news/aberdeen-aberdeenshire/6963242/aberdeen-school-pupils-forced-out-for-repairs-but-could-it-be-first-step-towards-closure/"
+  },
+  {
+    "Headline": "Closure - Dundee City Council Schools, Dundee (State Schools)",
+    "Date": "10 March 2026",
+    "Info": "Dundee City Council is assessing whether its nurseries and schools can open safely on March 18 and 24, as teacher strikes over workload by the Educational Institute of Scotland (EIS) threaten closures.",
+    "Link": "https://www.thecourier.co.uk/fp/news/5449113/dundee-schools-shut-strikes-teachers-workloads/"
+  },
+  {
+    "Headline": "Closure - Moray Schools, Moray (State Schools)",
+    "Date": "11 March 2026",
+    "Info": "All primary and secondary schools across Moray will close to pupils on Thursday, March 19, due to teacher strike action for better working conditions, with a potential further closure on March 25.",
+    "Link": "https://www.pressandjournal.co.uk/fp/news/6974423/moray-schools-closed-strike-action/"
+  }
+]
