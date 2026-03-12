@@ -1,32 +1,32 @@
 [
   {
-    "Headline": "Merger - Malvern College (Independent) expands to S\u00e3o Paulo, Brazil",
+    "Headline": "Merger - Warminster School (Independent), Wiltshire & Cancelled Merger - St Lawrence College (Independent), Kent",
     "Date": "05 March 2026",
-    "Info": "Malvern College, a leading UK independent school, has partnered with Bossa Nova Edulink LTDA to open Malvern College S\u00e3o Paulo in 2027/2028, marking its first South American campus as part of a global expansion strategy.",
-    "Link": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF88Ajkm3KINRLHBHfvwcEs4hftg1h5yHuT_84HeH0ABHMgR6_Li0O_h3NjfoAlhZWxAdZukerS7D_StPGUUWV0pM0CrWj-Gu3LpxmhGtil-Nd1tOnb4mewrqoBd9lHxGfGRhE8CJRHFd6S17vqwJFspwJ8waOJyi0X05Q0i-zRZI_qL9R3vGtSJqLB4-t8TJYtZHp-Ccp5DF7DVwFcAds0ve1DUYqROKU4YK11wRM="
+    "Info": "Warminster School, with approximately 500 pupils, is set to join the for-profit QED Schools Group. Concurrently, St Lawrence College, Ramsgate, has halted plans to merge with Dover College, a decision influenced by significant financial pressures including falling pupil numbers and VAT on fees.",
+    "Link": "https://www.schoolmanagementplus.com/iep-school-news-and-announcements/warminster-school-to-join-qed-group/"
   },
   {
-    "Headline": "Leadership - Newcastle-under-Lyme School (Independent) appoints new Assistant Head Academic, Staffordshire",
-    "Date": "05 March 2026",
-    "Info": "Newcastle-under-Lyme School, an independent school in Staffordshire, is restructuring its academic leadership by adding a new Assistant Head Academic role, focusing on learning, innovation, and academic systems, with a start date of September 2026.",
-    "Link": "https://www.tes.com/jobs/vacancy/assistant-head-academic-learning-innovation-and-academic-systems-staffordshire-2296313"
-  },
-  {
-    "Headline": "Merger - St Lawrence College (Independent) and Dover College (Independent) merger halted, Kent",
-    "Date": "05 March 2026",
-    "Info": "The planned merger between St Lawrence College and Dover College in Kent has been halted due to financial pressures, including falling pupil numbers, the imposition of VAT on fees, and the removal of business rates exemption.",
-    "Link": "https://www.slcuk.com/2026/03/05/announcement/"
-  },
-  {
-    "Headline": "News - Prince's Mead School (Independent) expands nursery provision, Hampshire",
-    "Date": "10 March 2026",
-    "Info": "Prince's Mead School in Hampshire is significantly expanding its nursery provision from September 2026, welcoming children from two years old and adopting a year-round model, following its merger with King Edward VI School last September. The school also announced the appointment of Anna Clark as head of nursery.",
-    "Link": "https://www.hampshirechronicle.co.uk/news/25921104.princes-mead-announces-major-expansion-nursery-provision/"
-  },
-  {
-    "Headline": "News - UK Government plans new 'V-levels' vocational qualification for 2027",
+    "Headline": "Potential Closure - Brabyns Preparatory School (Independent), Stockport & Edenhurst Preparatory School (Independent), Staffordshire",
     "Date": "09 March 2026",
-    "Info": "The UK government is planning to introduce new 'V-levels' qualifications from September 2027, offering a vocational alternative to A-levels to provide more flexible post-16 education pathways for students in England.",
-    "Link": "https://whichschooladvisor.com/uk/school-news/v-levels-explained-new-uk-vocational-a-level-alternative-planned-for-2027"
+    "Info": "Brabyns Preparatory School (86 pupils) and Edenhurst Preparatory School (157 pupils), both part of the Bellevue Education group, have begun formal consultations on proposals for permanent closure by the end of the summer term due to challenges facing the independent school sector.",
+    "Link": "https://www.schoolmanagementplus.com/iep-school-news-and-announcements/two-schools-in-bellevue-group-consult-on-closure/"
+  },
+  {
+    "Headline": "Financial - Aspirations Academies Trust (State School), West London, Oxfordshire, Dorset",
+    "Date": "09 March 2026",
+    "Info": "Aspirations Academies Trust, which operates 16 schools, plans to make over \u00a33 million in savings through curriculum and staffing remodelling, central support reductions, and reshaping senior leadership structures after reporting a nearly \u00a3500,000 deficit last year.",
+    "Link": "https://schoolsweek.co.uk/academy-trust-to-make-big-cuts-after-falling-500k-into-the-red/"
+  },
+  {
+    "Headline": "Closure - Our Lady's Abingdon (Independent), Abingdon, Oxfordshire",
+    "Date": "11 March 2026",
+    "Info": "The buildings of Our Lady's Abingdon, a private school that permanently closed last year due to financial difficulties with accumulated debts of over \u00a31.5 million, are expected to be sold during the summer by its owners.",
+    "Link": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJy6Fjcd32aFgQRf9lanEi-vQosDuNLs8TKjNydxsyRdBiSMETxglvFLMtVslzQiUVr78IoVvWzbAUhFa7RdbPzSF3sjceBlBWWlbJjAXphhvMgjijYGm1LGctyxIIjprApoP-GAiwlnnm38f1t0zamf50qkKwEy33b_pvJUkjF0hYyoZ8FiGfTMQwNt7eK6t2YQEnAx3_"
+  },
+  {
+    "Headline": "Closure - LIPA School (State School), Liverpool",
+    "Date": "09 March 2026",
+    "Info": "LIPA School in Liverpool, which was previously rated inadequate by Ofsted and placed under special measures, is scheduled to close permanently at the end of the current academic year.",
+    "Link": "https://evrimagaci.org/gpt/threat-forces-liverpool-school-to-close-amid-turmoil-532735"
   }
 ]
