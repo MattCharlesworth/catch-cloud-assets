@@ -42,7 +42,7 @@ print("Sending prompt to Gemini Pro with Live Search enabled...")
 
 # 3. Call the API using the Pro model and Live Search tool
 response = client.models.generate_content(
-    model='gemini-3.1-pro',
+    model='gemini-3.1-pro-preview',
     contents=prompt,
     config=types.GenerateContentConfig(
         tools=[types.Tool(google_search=types.GoogleSearch())],
