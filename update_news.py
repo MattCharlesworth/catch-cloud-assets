@@ -139,6 +139,6 @@ except Exception:
 # 6. Overwrite the JSON file
 print(f"Saving {len(final_headlines)} active headlines...")
 with open('headlines.json', 'w', encoding='utf-8') as f:
-    json.dump(final_headlines, f, indent=2)
+    json.dump(final_headlines, f, indent=2, ensure_ascii=False)
 
 print("Update complete!")
