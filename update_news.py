@@ -36,8 +36,12 @@ Focus Areas: Prioritise news involving operational and structural changes, speci
 - Severe financial pressures or significant fee restructuring
 - Major leadership changes or restructuring
 
-Source Requirements: Do not limit your search to major national outlets (e.g., BBC, The Times, Telegraph). You must actively search local and regional UK news sites (e.g., Chronicle Live, regional publishers) and specialist education press (e.g., Independent Education Today, Tes) to capture grassroots sector shifts.
-
+Source Requirements: 
+1. HIGH PRIORITY TARGETS: You MUST actively search and prioritize results from these specific sector-leading URLs:
+   - https://www.tes.com/magazine/news
+   - https://schoolsweek.co.uk/
+   - https://www.bbc.co.uk/news/topics/crr7mlg0vg4t (BBC Education)
+2. BROADER SEARCH: After checking the priority sources, you must also search local and regional UK news sites (e.g., Chronicle Live, regional publishers) and other specialist education press (e.g., Independent Education Today) to capture grassroots sector shifts.
 Language Requirement: All responses must be written in standard British English spelling and grammar (e.g., categorise, programme, centre).
 
 Output Formatting Rules:
