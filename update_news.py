@@ -76,9 +76,69 @@ response = client.models.generate_content(
 
 # Clean up the output string
 output_text = response.text.strip()
-if output_text.startswith("
-http://googleusercontent.com/immersive_entry_chip/0
-http://googleusercontent.com/immersive_entry_chip/1
-http://googleusercontent.com/immersive_entry_chip/2
+if output_text.startswith("```json"):
+    output_text = output_text[7:]
+if output_text.startswith("```"):
+    output_text = output_text[3:]
+if output_text.endswith("```"):
+    output_text = output_text[:-3]
+output_text = output_text.strip()
 
-Update your GitHub file with this one, and you will have the absolute best of both worlds: the strict formatting and rules of your original masterclass prompt, powered by the 3.1 Pro engine, seamlessly maintaining a rolling 7-day feed.
+# 4. Parse new headlines
+new_headlines = []
+try:
+    if output_text and output_text != "[]":
+        new_headlines = json.loads(output_text)
+except json.JSONDecodeError as e:
+    print(f"Warning: Could not parse Gemini output as JSON. Output was: {output_text}")
+    new_headlines = []
+
+print("Cleaning up tracking URLs for new headlines...")
+for item in new_headlines:
+    ugly_url = item.get("Link", "")
+    if "vertexaisearch.cloud.google.com" in ugly_url or "[google.com/url](https://google.com/url)" in ugly_url:
+        try:
+            r = requests.get(ugly_url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=10)
+            item["Link"] = r.url
+        except Exception:
+            pass
+
+# 5. Merge, Deduplicate, and Filter (The 7-Day Rolling Logic)
+print("Merging and filtering headlines...")
+
+all_headlines = new_headlines + existing_headlines
+
+# Deduplicate by Link
+seen_links = set()
+unique_headlines = []
+for h in all_headlines:
+    link = h.get("Link")
+    if link and link not in seen_links:
+        seen_links.add(link)
+        unique_headlines.append(h)
+
+# Filter out anything older than 7 days
+cutoff_date = datetime.now() - timedelta(days=7)
+final_headlines = []
+
+for h in unique_headlines:
+    date_str = h.get("Date", "").strip()
+    try:
+        article_date = datetime.strptime(date_str, "%d %B %Y")
+        if article_date >= cutoff_date:
+            final_headlines.append(h)
+    except ValueError:
+        final_headlines.append(h) # Keep items with weird dates just to be safe
+
+# Sort newest to oldest
+try:
+    final_headlines.sort(key=lambda x: datetime.strptime(x.get("Date", ""), "%d %B %Y"), reverse=True)
+except Exception:
+    pass
+
+# 6. Overwrite the JSON file
+print(f"Saving {len(final_headlines)} active headlines...")
+with open('headlines.json', 'w', encoding='utf-8') as f:
+    json.dump(final_headlines, f, indent=2)
+
+print("Update complete!")
