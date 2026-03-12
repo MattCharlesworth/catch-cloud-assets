@@ -1,6 +1,9 @@
 import os
 import json
 import requests
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
 from google import genai
 from google.genai import types
@@ -142,3 +145,44 @@ with open('headlines.json', 'w', encoding='utf-8') as f:
     json.dump(final_headlines, f, indent=2, ensure_ascii=False)
 
 print("Update complete!")
+
+# 7. Send Daily Email Digest
+print("Checking if email notification is needed...")
+if new_headlines:
+    sender_email = os.environ.get("EMAIL_SENDER")
+    sender_password = os.environ.get("EMAIL_PASSWORD")
+
+    if sender_email and sender_password:
+        print("Sending email digest...")
+        try:
+            msg = MIMEMultipart()
+            msg['From'] = sender_email
+            msg['To'] = sender_email # Sends the email to yourself
+            msg['Subject'] = f"Catch Cloud: {len(new_headlines)} New Sector Headlines Today"
+            
+            # Format the email body beautifully
+            body = "Good morning! Here are the latest UK school headlines from the last 24 hours:\n\n"
+            for h in new_headlines:
+                body += f"📰 {h.get('Headline', '')}\n"
+                body += f"📅 {h.get('Date', '')}\n"
+                body += f"ℹ️ {h.get('Info', '')}\n"
+                body += f"🔗 {h.get('Link', '')}\n"
+                body += "-" * 40 + "\n\n"
+            
+            body += "This is an automated message from your Catch Cloud GitHub Action."
+            
+            msg.attach(MIMEText(body, 'plain', 'utf-8'))
+            
+            # Connect to Gmail and send!
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(sender_email, sender_password)
+            server.send_message(msg)
+            server.quit()
+            print("Email sent successfully!")
+        except Exception as e:
+            print(f"Failed to send email: {e}")
+    else:
+        print("Skipping email: EMAIL_SENDER or EMAIL_PASSWORD secrets are not set.")
+else:
+    print("No new headlines today. Skipping email.")
