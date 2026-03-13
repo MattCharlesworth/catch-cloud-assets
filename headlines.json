@@ -1,5 +1,17 @@
 [
   {
+    "Headline": "Financial - Private School Sector, Wiltshire",
+    "Date": "13 March 2026",
+    "Info": "A new survey by wealth management firm Saltus reveals that nearly a tenth of wealthy parents have withdrawn their children from the independent sector since the introduction of VAT on school fees. Local MPs have highlighted recent closures, such as Rendcomb College and Bishopstrow College, as direct consequences of these financial pressures.",
+    "Link": "https://www.wiltshiretimes.co.uk/news/parents-deserting-private-school-sector-amid-vat-changes"
+  },
+  {
+    "Headline": "Closure - Manorbier Church in Wales VC School (State), Pembrokeshire",
+    "Date": "13 March 2026",
+    "Info": "Pembrokeshire County Council has voted to proceed with the statutory closure of Manorbier Church in Wales VC School, which was destroyed by fire in 2022. The council concluded that rebuilding the state school would not represent value for money due to low pupil numbers in the area.",
+    "Link": "https://www.pembrokeshire-herald.com/manorbier-school-closure-approved-while-insurance-claim-still-unresolved"
+  },
+  {
     "Headline": "Closure - Woodcote House, Surrey",
     "Date": "12 March 2026",
     "Info": "A newly published retrospective highlights the permanent closure of the 150-year-old independent preparatory school, underscoring a broader trend that saw 45 prep schools close over the past year due to severe financial headwinds and VAT policies.",
@@ -46,17 +58,5 @@
     "Date": "07 March 2026",
     "Info": "Nottinghamshire County Council has confirmed this rural village school will permanently close on 31 August 2026 due to significant financial and operational difficulties. The school currently has only eight pupils and was forecast to face a budget deficit of around £100,000 by August 2026.",
     "Link": "https://www.nottinghampost.com/news/local-news/rural-nottinghamshire-village-primary-school-10851106"
-  },
-  {
-    "Headline": "Closure - Prestwich Preparatory School (Independent), Prestwich",
-    "Date": "06 March 2026",
-    "Info": "This £8,000-a-year independent school will permanently close on 27 March 2026, leaving parents with just three weeks to find alternative arrangements. The closure is attributed to the headteacher's ill health and increased financial pressures including VAT, with pupil numbers having fallen to just 36.",
-    "Link": "https://www.manchestereveningnews.co.uk/news/greater-manchester-news/prestwich-preparatory-school-closing-parents-33543276"
-  },
-  {
-    "Headline": "Closure - Kings London (Independent), Beckenham",
-    "Date": "06 March 2026",
-    "Info": "Kings Education has announced the permanent closure of its London Beckenham college, effective 20 March 2026, as part of a strategic UK restructuring. The provider cited the introduction of VAT on independent school fees as a key factor causing a decline in student enrolments.",
-    "Link": "https://studytravel.network/magazine/news/0/31995"
   }
 ]
