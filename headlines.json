@@ -1,5 +1,23 @@
 [
   {
+    "Headline": "Leadership - The Education Alliance (State), East Yorkshire",
+    "Date": "13 March 2026",
+    "Info": "Jonny Uttley has announced he is stepping down as Chief Executive of The Education Alliance, a multi-academy trust comprising 12 schools, after six years in the role. Scott Ratheram will serve as interim CEO while a recruitment process takes place.",
+    "Link": "https://www.tes.com/magazine/news"
+  },
+  {
+    "Headline": "Merger - Tilery Primary School (State), Stockton",
+    "Date": "13 March 2026",
+    "Info": "Tilery Primary School has officially joined the Northern Lights Learning Trust, becoming the twelfth school to merge into the growing multi-academy trust.",
+    "Link": "https://www.darlingtonandstocktontimes.co.uk/"
+  },
+  {
+    "Headline": "Leadership - David Ross Education Trust (State), National",
+    "Date": "13 March 2026",
+    "Info": "The David Ross Education Trust has named Simon Rose as its new interim Chief Executive Officer following a rethink of the trust's leadership structure.",
+    "Link": "https://schoolsweek.co.uk/movers-and-shakers-fea-infinity-epi-gdst/"
+  },
+  {
     "Headline": "Financial - Private School Sector, Wiltshire",
     "Date": "13 March 2026",
     "Info": "A new survey by wealth management firm Saltus reveals that nearly a tenth of wealthy parents have withdrawn their children from the independent sector since the introduction of VAT on school fees. Local MPs have highlighted recent closures, such as Rendcomb College and Bishopstrow College, as direct consequences of these financial pressures.",
@@ -52,11 +70,5 @@
     "Date": "09 March 2026",
     "Info": "The Bellevue Education group has launched a formal consultation to close this 86-pupil co-educational prep school by the end of the summer term. The proposal follows a prolonged review of the ongoing financial challenges facing the independent school sector, though the school's nursery will remain open.",
     "Link": "https://www.schoolmanagementplus.com/iep-school-news-and-announcements/two-schools-in-bellevue-group-consult-on-closure/"
-  },
-  {
-    "Headline": "Closure - Dean Hole Church of England Primary School (State School), Caunton",
-    "Date": "07 March 2026",
-    "Info": "Nottinghamshire County Council has confirmed this rural village school will permanently close on 31 August 2026 due to significant financial and operational difficulties. The school currently has only eight pupils and was forecast to face a budget deficit of around £100,000 by August 2026.",
-    "Link": "https://www.nottinghampost.com/news/local-news/rural-nottinghamshire-village-primary-school-10851106"
   }
 ]
