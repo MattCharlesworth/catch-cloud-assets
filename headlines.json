@@ -1,5 +1,17 @@
 [
   {
+    "Headline": "Merger - Beaudesert Park School, Gloucestershire",
+    "Date": "20 March 2026",
+    "Info": "Beaudesert Park School, an independent prep school, has announced it will merge with the Rugby School Group in July 2026, securing a seven-figure investment to enhance its site and facilities.",
+    "Link": "https://www.rugbyschool.co.uk/beaudesert-park-school-to-join-rugby-school-group/"
+  },
+  {
+    "Headline": "Closure - Middle Street Primary (State), Brighton",
+    "Date": "19 March 2026",
+    "Info": "Brighton and Hove City Council is advancing proposals to close Middle Street Primary School due to a severe financial deficit and falling pupil numbers, whilst an independent investigation into the school's governance has been ordered.",
+    "Link": "https://www.brightonandhovenews.org/independent-investigation-ordered-as-brightons-oldest-school-edges-towards-closure/"
+  },
+  {
     "Headline": "Closure - LIPA Primary and High School (State), Liverpool",
     "Date": "18 March 2026",
     "Info": "Parents are campaigning to save the arts-focused LIPA Primary and High School from closure, as the institution enters the final stages of a consultation period driven by financial concerns and falling pupil numbers [3.8].",
@@ -52,35 +64,5 @@
     "Date": "16 March 2026",
     "Info": "Beaudesert Park School, a highly regarded independent prep school, has announced it will merge with the historic Rugby School Group from July 2026, benefiting from a seven-figure investment in its site and facilities [6.17].",
     "Link": "https://www.rugbyschool.co.uk/"
-  },
-  {
-    "Headline": "Leadership - The Education Alliance (State), East Yorkshire",
-    "Date": "13 March 2026",
-    "Info": "Jonny Uttley has announced he is stepping down as Chief Executive of The Education Alliance, a multi-academy trust comprising 12 schools, after six years in the role. Scott Ratheram will serve as interim CEO while a recruitment process takes place.",
-    "Link": "https://www.tes.com/magazine/news"
-  },
-  {
-    "Headline": "Merger - Tilery Primary School (State), Stockton",
-    "Date": "13 March 2026",
-    "Info": "Tilery Primary School has officially joined the Northern Lights Learning Trust, becoming the twelfth school to merge into the growing multi-academy trust.",
-    "Link": "https://www.darlingtonandstocktontimes.co.uk/"
-  },
-  {
-    "Headline": "Leadership - David Ross Education Trust (State), National",
-    "Date": "13 March 2026",
-    "Info": "The David Ross Education Trust has named Simon Rose as its new interim Chief Executive Officer following a rethink of the trust's leadership structure.",
-    "Link": "https://schoolsweek.co.uk/movers-and-shakers-fea-infinity-epi-gdst/"
-  },
-  {
-    "Headline": "Financial - Private School Sector, Wiltshire",
-    "Date": "13 March 2026",
-    "Info": "A new survey by wealth management firm Saltus reveals that nearly a tenth of wealthy parents have withdrawn their children from the independent sector since the introduction of VAT on school fees. Local MPs have highlighted recent closures, such as Rendcomb College and Bishopstrow College, as direct consequences of these financial pressures.",
-    "Link": "https://www.wiltshiretimes.co.uk/news/parents-deserting-private-school-sector-amid-vat-changes"
-  },
-  {
-    "Headline": "Closure - Manorbier Church in Wales VC School (State), Pembrokeshire",
-    "Date": "13 March 2026",
-    "Info": "Pembrokeshire County Council has voted to proceed with the statutory closure of Manorbier Church in Wales VC School, which was destroyed by fire in 2022. The council concluded that rebuilding the state school would not represent value for money due to low pupil numbers in the area.",
-    "Link": "https://www.pembrokeshire-herald.com/manorbier-school-closure-approved-while-insurance-claim-still-unresolved"
   }
 ]
