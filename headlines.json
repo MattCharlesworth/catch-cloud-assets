@@ -1,5 +1,23 @@
 [
   {
+    "Headline": "Closure - Our Lady's Abingdon, Oxfordshire",
+    "Date": "23 March 2026",
+    "Info": "Our Lady's Abingdon, an independent school founded in 1860, has gone into liquidation and its site is expected to be sold following its permanent closure due to financial reasons.",
+    "Link": "https://www.oxfordmail.co.uk/"
+  },
+  {
+    "Headline": "Closure - Fountainhall Primary (State), Scottish Borders",
+    "Date": "23 March 2026",
+    "Info": "Scottish Borders Council is launching a public consultation over the permanent closure of Fountainhall Primary School, a rural state school that was mothballed after its roll fell to just one pupil.",
+    "Link": "https://www.heraldscotland.com/"
+  },
+  {
+    "Headline": "Merger - Northampton College and Moulton College, Northamptonshire",
+    "Date": "23 March 2026",
+    "Info": "Northampton College and Moulton College have announced a proposed merger aimed at creating a more financially secure and resilient institution with a combined turnover of over £70 million.",
+    "Link": "https://www.northamptoncollege.ac.uk/"
+  },
+  {
     "Headline": "Closure - LIPA School (State), Liverpool",
     "Date": "22 March 2026",
     "Info": "The Secretary of State for Education and the board of trustees have made a substantive decision to permanently close the primary and secondary academy by 31 August 2026, prompting parents to launch a petition.",
@@ -34,29 +52,5 @@
     "Date": "18 March 2026",
     "Info": "Bede's School has announced a strategic expansion to launch a new Upper School, offering a streamlined day-school alternative with lower fees in response to the evolving economic landscape of independent education.",
     "Link": "https://www.schoolmanagementplus.com/independent-schools/bedes-school-to-launch-upper-school-at-eastbourne-campus/"
-  },
-  {
-    "Headline": "Merger - Amesbury School, Surrey",
-    "Date": "17 March 2026",
-    "Info": "Historic Amesbury School in Hindhead has announced it will merge with the Charterhouse family of schools on 1 August to secure its long-term future and enrich pupil opportunities. [3.2]",
-    "Link": "https://www.schoolmanagementplus.com/news/the-latest-independent-school-mergers-round-up/"
-  },
-  {
-    "Headline": "Financial - King Edward's School, Bath",
-    "Date": "17 March 2026",
-    "Info": "King Edward's School is selling its Weston Lane campus to raise vital funds and consolidate its operations onto a single site by 2027, citing financial pressures from the imposition of VAT on fees.",
-    "Link": "https://www.wiltshiretimes.co.uk/news/"
-  },
-  {
-    "Headline": "Closure Averted - Monkseaton Middle School (State), North Tyneside",
-    "Date": "17 March 2026",
-    "Info": "Monkseaton Middle School, which was faced with the prospect of closure due to low birth rates and budget deficits, has had its closure put on hold following a council consultation and plans to expand its year groups.",
-    "Link": "https://www.itv.com/news/tyne-tees/"
-  },
-  {
-    "Headline": "Financial - Private Special Schools, National",
-    "Date": "17 March 2026",
-    "Info": "An investigation has revealed that councils are facing unsustainable financial pressures, spending up to four times as much per pupil on private special schools compared to state equivalents. In response, the government is preparing to implement new funding bands to rein in these escalating costs.",
-    "Link": "https://schoolsweek.co.uk/soaring-cost-of-private-provision-revealed-as-ministers-plan-curbs/"
   }
 ]
