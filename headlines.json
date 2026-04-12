@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "Headline": "Closure - Fairview International School, Stirling",
+    "Date": "12 April 2026",
+    "Info": "Fairview International School has launched a consultation regarding its potential closure at the end of the academic year, citing significant financial challenges and declining enrolment numbers.",
+    "Link": "https://www.thecourier.co.uk/news/stirling/fairview-international-inside-at-risk-bridge-of-allan-private-school/"
+  },
+  {
+    "Headline": "Closure - St Lawrence College, Kent",
+    "Date": "12 April 2026",
+    "Info": "St Lawrence College has closed with immediate effect for the vast majority of its pupils after falling into administration, with leadership citing dwindling pupil numbers, mounting operational costs, and the introduction of VAT on school fees.",
+    "Link": "https://www.mirror.co.uk/news/uk-news/uk-leisure-giant-charity-two-plunge-administration-full-list"
+  },
+  {
+    "Headline": "News - One School Global, Torfaen",
+    "Date": "11 April 2026",
+    "Info": "A former call centre in Cwmbran is set to be converted into a new private faith school following approval from the local council committee.",
+    "Link": "https://www.southwalesargus.co.uk/news/one-school-global-faith-school-for-south-wales-approved/"
+  }
+]
