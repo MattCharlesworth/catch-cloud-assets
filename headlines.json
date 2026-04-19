@@ -1,5 +1,11 @@
 [
   {
+    "Headline": "Closure - Bentilee Nursery School (State), Stoke-on-Trent",
+    "Date": "19 April 2026",
+    "Info": "Stoke-on-Trent City Council has proposed the closure of Bentilee Nursery School due to an unsustainable financial deficit that is projected to increase. The council plans to relocate the nursery provision to nearby primary schools operated by a local academy trust.",
+    "Link": "https://www.stokesentinel.co.uk/news/stoke-on-trent-news/loss-making-stoke-on-trent-nursery-school-facing-closure"
+  },
+  {
     "Headline": "Closure - Immanuel College, Hertfordshire",
     "Date": "14 April 2026",
     "Info": "Immanuel College has announced that it will permanently close at the end of the current academic year, citing severe financial pressures caused by the government's introduction of VAT on independent school fees [4.5].",
@@ -10,23 +16,5 @@
     "Date": "13 April 2026",
     "Info": "Co-op Academies Trust is set to absorb the six primary schools run by the struggling South Cumbria Multi Academy Trust, which is being dissolved following a financial notice to improve and a significant deficit.",
     "Link": "https://www.tes.com/magazine/news/general/co-op-academies-trust-set-expand-northwards"
-  },
-  {
-    "Headline": "Closure - St Lawrence College, Kent",
-    "Date": "12 April 2026",
-    "Info": "St Lawrence College, an independent day and boarding school, has shut its doors with immediate effect for the vast majority of its 500 pupils after falling into administration. Those in charge cited dwindling pupil numbers, the introduction of VAT on school fees, and mounting operational costs as contributing factors.",
-    "Link": "https://www.mirror.co.uk/news/uk-news/uk-leisure-giant-charity-two-plunge-administration-32568912"
-  },
-  {
-    "Headline": "Closure - Fairview International School, Stirling",
-    "Date": "12 April 2026",
-    "Info": "Fairview International School has launched a consultation regarding its potential closure at the end of the academic year, citing significant financial challenges and declining enrolment numbers.",
-    "Link": "https://www.thecourier.co.uk/news/stirling/fairview-international-inside-at-risk-bridge-of-allan-private-school/"
-  },
-  {
-    "Headline": "Closure - St Lawrence College, Kent",
-    "Date": "12 April 2026",
-    "Info": "St Lawrence College has closed with immediate effect for the vast majority of its pupils after falling into administration, with leadership citing dwindling pupil numbers, mounting operational costs, and the introduction of VAT on school fees.",
-    "Link": "https://www.mirror.co.uk/news/uk-news/uk-leisure-giant-charity-two-plunge-administration-full-list"
   }
 ]
