@@ -1,5 +1,23 @@
 [
   {
+    "Headline": "Closure - Fairview International School, Stirlingshire",
+    "Date": "20 April 2026",
+    "Info": "Fairview International School has launched a consultation regarding its potential closure, blaming mounting financial challenges and declining pupil enrolment numbers.",
+    "Link": "https://www.thecourier.co.uk/fp/education/schools/5472220/fairview-international-school-bridge-of-allan-royal-hotel-explainer/"
+  },
+  {
+    "Headline": "Closure - Immanuel College, London",
+    "Date": "19 April 2026",
+    "Info": "Immanuel College, the UK's only Jewish private secondary school, has proposed closing this summer due to severe financial pressures following the imposition of VAT on independent school fees.",
+    "Link": "https://www.timesofisrael.com/the-closing-of-a-jewish-school-in-london-and-the-loss-of-friendship/"
+  },
+  {
+    "Headline": "Merger - Radley College and Prep Schools Trust, Oxfordshire",
+    "Date": "19 April 2026",
+    "Info": "Radley College has officially formed the Radley Schools Group following a major merger with the Prep Schools Trust, bringing together multiple prep schools under a single controlling responsibility.",
+    "Link": "https://www.cotswoldjournal.co.uk/news/uk-private-schools-major-merger-with-multiple-prep-schools/"
+  },
+  {
     "Headline": "Closure - Bentilee Nursery School (State), Stoke-on-Trent",
     "Date": "19 April 2026",
     "Info": "Stoke-on-Trent City Council has proposed the closure of Bentilee Nursery School due to an unsustainable financial deficit that is projected to increase. The council plans to relocate the nursery provision to nearby primary schools operated by a local academy trust.",
@@ -10,11 +28,5 @@
     "Date": "14 April 2026",
     "Info": "Immanuel College has announced that it will permanently close at the end of the current academic year, citing severe financial pressures caused by the government's introduction of VAT on independent school fees [4.5].",
     "Link": "https://www.telegraph.co.uk/"
-  },
-  {
-    "Headline": "Merger - South Cumbria Multi Academy Trust (State), Cumbria",
-    "Date": "13 April 2026",
-    "Info": "Co-op Academies Trust is set to absorb the six primary schools run by the struggling South Cumbria Multi Academy Trust, which is being dissolved following a financial notice to improve and a significant deficit.",
-    "Link": "https://www.tes.com/magazine/news/general/co-op-academies-trust-set-expand-northwards"
   }
 ]
