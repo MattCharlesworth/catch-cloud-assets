@@ -1,6 +1,18 @@
 [
   {
     "Headline": "Closure - Thetford Grammar School, Norfolk",
+    "Date": "29 April 2026",
+    "Info": "Thetford Grammar School, one of Britain's oldest independent schools, has announced its closure at the end of the current academic year due to severe financial pressures exacerbated by the introduction of VAT on fees, and is now seeking to merge with Finborough School.",
+    "Link": "https://uk.news.yahoo.com/one-countrys-oldest-schools-close-114918239.html"
+  },
+  {
+    "Headline": "Financial - St Francis' Catholic Primary School (State), North Somerset",
+    "Date": "29 April 2026",
+    "Info": "Facing significant financial pressures and falling pupil rolls, St Francis' Catholic Primary School has been forced to merge year groups to save on staffing costs, highlighting the broader demographic shifts impacting state school capacities.",
+    "Link": "https://www.tes.com/magazine/analysis/general/how-falling-pupil-rolls-reshaping-englands-schools"
+  },
+  {
+    "Headline": "Closure - Thetford Grammar School, Norfolk",
     "Date": "28 April 2026",
     "Info": "Thetford Grammar School, an independent school with a 1,400-year history, has announced its permanent closure at the end of the current term due to severe financial pressures exacerbated by the introduction of VAT on school fees [2.3]. The school plans to merge its resources with Finborough School in Stowmarket.",
     "Link": "https://www.edp24.co.uk/news/24282828.thetford-grammar-school-close-due-vat-changes/"
@@ -34,29 +46,5 @@
     "Date": "24 April 2026",
     "Info": "Rendcomb College has announced it will permanently close at the end of the academic year, citing financial instability driven by the introduction of VAT on fees and increased National Insurance contributions.",
     "Link": "https://www.oxfordmail.co.uk/news/24275831.three-historic-private-schools-close-uk-combined-333-years/"
-  },
-  {
-    "Headline": "Closure - Malvern St James, Worcestershire",
-    "Date": "23 April 2026",
-    "Info": "Malvern St James has announced a proposed closure at the end of the academic year, citing a £6 million shortfall exacerbated by declining pupil numbers and the introduction of VAT on independent school fees.",
-    "Link": "https://thepienews.com/news/malvern-st-james-under-threat-of-closure-as-financial-pressures-mount/"
-  },
-  {
-    "Headline": "Closure - Rendcomb College, Gloucestershire",
-    "Date": "23 April 2026",
-    "Info": "Rendcomb College is set to permanently close this summer after more than a century of operation, with governors attributing the decision to the economic climate, rising costs, and the VAT levy on private schools.",
-    "Link": "https://www.wiltsglosstandard.co.uk/news/rendcomb-college-near-cirencester-closing-after-vat-hike/"
-  },
-  {
-    "Headline": "Financial - Jami'ah Khadijatul Kubra, Birmingham",
-    "Date": "23 April 2026",
-    "Info": "This independent all-girls Islamic school is facing imminent closure due to a £93,261 deficit and low student numbers, prompting a desperate fundraising campaign to secure its future.",
-    "Link": "https://www.birminghammail.co.uk/news/midlands-news/birmingham-all-girls-islamic-school-facing-closure-after-problem-for-number-of-years"
-  },
-  {
-    "Headline": "Financial - State Primary Schools, Nationwide",
-    "Date": "23 April 2026",
-    "Info": "The National Audit Office has warned that a forecast drop of 56,300 primary pupils by 2027 could lead to a £288 million reduction in per-pupil funding, creating severe financial risks and potential closures for state schools.",
-    "Link": "https://www.publicfinance.co.uk/news/2026/04/nao-warns-financial-risks-primary-school-demand-slump"
   }
 ]
