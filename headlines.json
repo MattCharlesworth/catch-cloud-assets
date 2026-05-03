@@ -1,5 +1,17 @@
 [
   {
+    "Headline": "Closure - Malvern St James School, Worcestershire",
+    "Date": "3 May 2026",
+    "Info": "Following the recent announcement of its planned closure at the end of the academic year, local commentary has underscored the severe financial pressures and declining pupil numbers impacting the independent school.",
+    "Link": "https://www.malverngazette.co.uk/news/views-malvern-st-james-school-threat-closure"
+  },
+  {
+    "Headline": "Merger - Merrow Junior School and Merrow C of E Infant School (State), Surrey",
+    "Date": "2 May 2026",
+    "Info": "Surrey County Council has proposed amalgamating Merrow Junior School and Merrow C of E Controlled Infant School due to falling pupil numbers. The plan has drawn criticism from the National Secular Society over concerns that the merged state school will impose a religious character on pupils.",
+    "Link": "https://www.getsurrey.co.uk/news/surrey-news/fears-surrey-school-merger-could-force-religion-on-pupils"
+  },
+  {
     "Headline": "Closure - Thetford Grammar School, Norfolk",
     "Date": "29 April 2026",
     "Info": "Thetford Grammar School, one of Britain's oldest independent schools, has announced its closure at the end of the current academic year due to severe financial pressures exacerbated by the introduction of VAT on fees, and is now seeking to merge with Finborough School.",
@@ -22,11 +34,5 @@
     "Date": "27 April 2026",
     "Info": "Malvern St James has proposed closing at the end of the current academic year due to a £6 million shortfall caused by falling pupil numbers, the introduction of VAT on school fees, and rising employment costs.",
     "Link": "https://www.herefordtimes.com/news/lucton-school-offers-sympathy-malvern-st-james/"
-  },
-  {
-    "Headline": "Acquisition - Immanuel College, Hertfordshire",
-    "Date": "26 April 2026",
-    "Info": "Immanuel College has been saved from closure after securing a £12.7 million rescue deal and being acquired by the international education network Global University Systems, following severe financial pressures exacerbated by the introduction of VAT on independent school fees.",
-    "Link": "https://thejewishweekly.com/immanuel-college-saved-from-closure-rescue-deal-agreed/"
   }
 ]
