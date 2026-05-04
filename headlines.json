@@ -1,5 +1,29 @@
 [
   {
+    "Headline": "Financial - Immanuel College, Hertfordshire",
+    "Date": "3 May 2026",
+    "Info": "Following severe financial challenges and falling enrolment that threatened closure, Immanuel College has been saved after a parent-led campaign raised £12m in nine days, leading to a rescue deal and the appointment of a new chair.",
+    "Link": "https://www.jewishnews.co.uk/immanuel-college-deal-signed-off-as-new-chair-takes-helm/"
+  },
+  {
+    "Headline": "Closure - Trinity Christian School, Reading",
+    "Date": "3 May 2026",
+    "Info": "Trinity Christian School permanently closed its doors recently due to financial difficulties exacerbated by the introduction of VAT on private education, leaving some pupils with special educational needs without a suitable state placement.",
+    "Link": "https://rdg.today/boy-loses-out-on-education-after-closure-of-independent-christian-school-in-reading/"
+  },
+  {
+    "Headline": "Closure - Malvern St James School, Worcestershire",
+    "Date": "3 May 2026",
+    "Info": "Malvern St James School has announced its proposed closure, driven by a significant decline in pupil numbers and broader financial pressures facing the independent sector.",
+    "Link": "https://www.worcesternews.co.uk/news/views-on-malvern-st-james-school-threat-of-closure/"
+  },
+  {
+    "Headline": "Closure - Abertillery Learning Community (State), Blaenau Gwent",
+    "Date": "3 May 2026",
+    "Info": "The local council is consulting on the potential closure of the Roseheyworth campus of the Abertillery Learning Community to address surplus spaces and a projected £4 million financial deficit by the 2029/30 academic year.",
+    "Link": "https://www.southwalesargus.co.uk/news/overwhelming-opposition-to-closing-abertillery-school/"
+  },
+  {
     "Headline": "Closure - Malvern St James School, Worcestershire",
     "Date": "3 May 2026",
     "Info": "Following the recent announcement of its planned closure at the end of the academic year, local commentary has underscored the severe financial pressures and declining pupil numbers impacting the independent school.",
@@ -28,11 +52,5 @@
     "Date": "28 April 2026",
     "Info": "Thetford Grammar School, an independent school with a 1,400-year history, has announced its permanent closure at the end of the current term due to severe financial pressures exacerbated by the introduction of VAT on school fees [2.3]. The school plans to merge its resources with Finborough School in Stowmarket.",
     "Link": "https://www.edp24.co.uk/news/24282828.thetford-grammar-school-close-due-vat-changes/"
-  },
-  {
-    "Headline": "Closure - Malvern St James, Worcestershire",
-    "Date": "27 April 2026",
-    "Info": "Malvern St James has proposed closing at the end of the current academic year due to a £6 million shortfall caused by falling pupil numbers, the introduction of VAT on school fees, and rising employment costs.",
-    "Link": "https://www.herefordtimes.com/news/lucton-school-offers-sympathy-malvern-st-james/"
   }
 ]
