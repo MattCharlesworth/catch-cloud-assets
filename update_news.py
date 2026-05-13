@@ -70,6 +70,20 @@ Example Format:
 ]
 """
 
+# Build existing headlines context for the prompt
+existing_context = ""
+if existing_headlines:
+    existing_context = """
+
+ALREADY REPORTED — avoid duplicating these unless there is a significant new development:
+"""
+    for h in existing_headlines:
+        existing_context += f"- {h.get('Headline', '')} (reported {h.get('Date', '')})
+"
+    existing_context += """
+A "significant new development" means materially new information — such as a closure date being confirmed, a reason being announced, a merger partner being named, a funding situation changing, or an official response being issued. Do NOT include new articles that simply restate or repackage what has already been reported from a different source.
+"""
+
 print("Fetching news from the past 24 hours...")
 
 import time
@@ -79,7 +93,7 @@ for attempt in range(3):
     try:
         response = client.models.generate_content(
             model='gemini-3.1-pro-preview',
-            contents=prompt,
+            contents=prompt + existing_context,
             config=types.GenerateContentConfig(
                 tools=[types.Tool(google_search=types.GoogleSearch())],
                 temperature=0.1
