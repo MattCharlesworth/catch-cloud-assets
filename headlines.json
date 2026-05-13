@@ -1,8 +1,20 @@
 [
   {
-    "Headline": "Financial - Private School Openings Outpace Closures, England",
-    "Date": "04 May 2026",
-    "Info": "A new analysis of Department for Education records reveals that 38 private schools have opened and 10 have closed so far this year, indicating that overall sector growth continues despite the financial pressures of the recent VAT introduction.",
-    "Link": "https://www.reddit.com/r/ukpolitics/comments/1cl1234/more_private_schools_have_opened_than_closed/"
+    "Headline": "Merger - Marling School (State), Gloucestershire",
+    "Date": "13 May 2026",
+    "Info": "Parents and pupils have launched a petition opposing the proposed renaming of the historic Marling School to 'Lift Marling', a change proposed as part of its planned merger into the national academy trust, Lift Schools.",
+    "Link": "https://www.gloucestershirelive.co.uk/news/local-news/parents-and-pupils-condemn-dreadful-name-change-for-marling-school-in-stroud"
+  },
+  {
+    "Headline": "Closure - Thetford Grammar School, Norfolk",
+    "Date": "13 May 2026",
+    "Info": "Reports indicate that the historic Thetford Grammar School has announced its closure amid a wider trend of independent schools shutting down due to the financial impact of the new VAT levy on school fees.",
+    "Link": "https://conservativepost.co.uk/labours-private-school-tax-gamble-unravels-as-65000-pupils-reportedly-forced-out/"
+  },
+  {
+    "Headline": "Closure - St Lawrence College, Kent",
+    "Date": "12 May 2026",
+    "Info": "The Charity Commission has opened a regulatory compliance case into St Lawrence College after the independent school entered administration and closed to most year groups, citing severe financial pressures and the imposition of VAT on fees [3.2].",
+    "Link": "https://www.civilsociety.co.uk/news/financial-and-governance-concerns-assessed-at-insolvent-private-school.html"
   }
 ]
