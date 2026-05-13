@@ -10,7 +10,7 @@ from google.genai import types
 
 # 1. Setup Gemini API Client
 api_key = os.environ.get("GEMINI_API_KEY")
-client = genai.Client(api_key=api_key)
+client = genai.Client(api_key=api_key, http_options={'timeout': 120})
 
 # 2. Read the EXISTING headlines so we don't overwrite them
 existing_headlines = []
@@ -72,14 +72,31 @@ Example Format:
 
 print("Fetching news from the past 24 hours...")
 
-response = client.models.generate_content(
-    model='gemini-3.1-pro-preview',
-    contents=prompt,
-    config=types.GenerateContentConfig(
-        tools=[types.Tool(google_search=types.GoogleSearch())],
-        temperature=0.1
-    )
-)
+import time
+
+response = None
+for attempt in range(3):
+    try:
+        response = client.models.generate_content(
+            model='gemini-3.1-pro-preview',
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                tools=[types.Tool(google_search=types.GoogleSearch())],
+                temperature=0.1
+            )
+        )
+        print(f"Request succeeded on attempt {attempt + 1}.")
+        break
+    except Exception as e:
+        print(f"Attempt {attempt + 1} failed: {e}")
+        if attempt < 2:
+            print("Retrying in 15 seconds...")
+            time.sleep(15)
+        else:
+            raise
+
+if response is None:
+    raise RuntimeError("All attempts failed — no response from Gemini API.")
 
 # Clean up the output string
 output_text = response.text.strip()
