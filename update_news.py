@@ -10,7 +10,11 @@ from google.genai import types
 
 # 1. Setup Gemini API Client
 api_key = os.environ.get("GEMINI_API_KEY")
-client = genai.Client(api_key=api_key, http_options={'timeout': 120})
+import httpx
+client = genai.Client(
+    api_key=api_key,
+    http_options={'timeout': httpx.Timeout(timeout=300.0, connect=30.0)}
+)
 
 # 2. Read the EXISTING headlines so we don't overwrite them
 existing_headlines = []
