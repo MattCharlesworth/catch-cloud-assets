@@ -78,8 +78,9 @@ if existing_headlines:
 ALREADY REPORTED — avoid duplicating these unless there is a significant new development:
 """
     for h in existing_headlines:
-        existing_context += f"- {h.get('Headline', '')} (reported {h.get('Date', '')})
-"
+        headline = h.get('Headline', '')
+        date = h.get('Date', '')
+        existing_context += "- " + headline + " (reported " + date + ")\n"
     existing_context += """
 A "significant new development" means materially new information — such as a closure date being confirmed, a reason being announced, a merger partner being named, a funding situation changing, or an official response being issued. Do NOT include new articles that simply restate or repackage what has already been reported from a different source.
 """
