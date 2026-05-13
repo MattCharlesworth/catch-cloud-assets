@@ -93,7 +93,9 @@ for attempt in range(3):
             print("Retrying in 15 seconds...")
             time.sleep(15)
         else:
-            raise
+            print(f"All 3 attempts failed. The Gemini API appears to be temporarily unavailable.")
+            print("Existing headlines.json has been preserved. The Action will exit cleanly.")
+            raise SystemExit(0)
 
 if response is None:
     raise RuntimeError("All attempts failed — no response from Gemini API.")
