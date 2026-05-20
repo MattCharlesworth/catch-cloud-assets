@@ -1,5 +1,11 @@
 [
   {
+    "Headline": "Closure - St Joseph's College, Reading",
+    "Date": "19 May 2026",
+    "Info": "St Joseph's College has entered a formal consultation period regarding its potential permanent closure in July 2026, citing falling pupil numbers and increasing costs exacerbated by the introduction of VAT on independent school fees.",
+    "Link": "https://www.readingchronicle.co.uk/news/26118235.reading-st-josephs-college-close-july/"
+  },
+  {
     "Headline": "Financial - Kent, North Tyneside, and York State Schools, Various",
     "Date": "14 May 2026",
     "Info": "Three cash-strapped councils have been granted government permission to breach minimum per-pupil funding levels due to severe SEND deficits, leaving average-sized primary schools in Kent significantly worse off.",
@@ -16,17 +22,5 @@
     "Date": "14 May 2026",
     "Info": "Aberdeenshire Council has published a proposal document regarding the consultation for the closure of Slains School, with plans to merge its catchment area with neighbouring schools.",
     "Link": "https://www.aberdeenshire.gov.uk/schools/school-info/admissions/school-consultations/"
-  },
-  {
-    "Headline": "Merger - Marling School (State), Gloucestershire",
-    "Date": "13 May 2026",
-    "Info": "Parents and pupils have launched a petition opposing the proposed renaming of the historic Marling School to 'Lift Marling', a change proposed as part of its planned merger into the national academy trust, Lift Schools.",
-    "Link": "https://www.gloucestershirelive.co.uk/news/local-news/parents-and-pupils-condemn-dreadful-name-change-for-marling-school-in-stroud"
-  },
-  {
-    "Headline": "Closure - Thetford Grammar School, Norfolk",
-    "Date": "13 May 2026",
-    "Info": "Reports indicate that the historic Thetford Grammar School has announced its closure amid a wider trend of independent schools shutting down due to the financial impact of the new VAT levy on school fees.",
-    "Link": "https://conservativepost.co.uk/labours-private-school-tax-gamble-unravels-as-65000-pupils-reportedly-forced-out/"
   }
 ]
