@@ -1,5 +1,11 @@
 [
   {
+    "Headline": "Closure - Logiealmond Primary School (State), Perthshire",
+    "Date": "26 May 2026",
+    "Info": "Perth and Kinross Council will consider an options appraisal later this week that includes the possible permanent closure of Logiealmond Primary School due to a significant decline in local pupil numbers.",
+    "Link": "https://www.thecourier.co.uk/fp/news/5498597/logiealmond-primary-school-closure-threat/"
+  },
+  {
     "Headline": "Closure Update - St Joseph's College, Reading",
     "Date": "23 May 2026",
     "Info": "Following the announcement of the independent school's potential closure on 10 July, local MPs have issued official responses. They are actively working with borough councils to support families and secure alternative educational placements for affected pupils.",
@@ -46,11 +52,5 @@
     "Date": "20 May 2026",
     "Info": "St Joseph's College has confirmed a closure date of 10 July 2026 if no financial rescue is found, prompting nearby independent The Abbey School to officially offer places to displaced families.",
     "Link": "https://www.readingchronicle.co.uk/news/reading-the-abbey-school-reaches-out-to-st-josephs-families"
-  },
-  {
-    "Headline": "Closure - St Joseph's College, Reading",
-    "Date": "19 May 2026",
-    "Info": "St Joseph's College has entered a formal consultation period regarding its potential permanent closure in July 2026, citing falling pupil numbers and increasing costs exacerbated by the introduction of VAT on independent school fees.",
-    "Link": "https://www.readingchronicle.co.uk/news/26118235.reading-st-josephs-college-close-july/"
   }
 ]
