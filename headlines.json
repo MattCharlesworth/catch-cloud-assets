@@ -1,5 +1,47 @@
 [
   {
+    "Headline": "Closure - St Gerard's School, Bangor",
+    "Date": "16 June 2026",
+    "Info": "St Gerard's School, a historic independent school in North Wales, has announced its permanent closure at the end of the current term due to sustained financial pressures, including the introduction of VAT on fees and the loss of charitable status.",
+    "Link": "https://www.walesonline.co.uk/news/wales-news/historic-welsh-private-school-close-within-weeks-making-staff-redundant"
+  },
+  {
+    "Headline": "Closure - Heathside Prep School, Hampstead",
+    "Date": "16 June 2026",
+    "Info": "Governors at the independent Heathside Prep School have confirmed it will close at the end of the summer term after dwindling pupil numbers made the school financially unviable.",
+    "Link": "https://www.hamhigh.co.uk/news/heathside-prep-school-closure-parents-are-distraught"
+  },
+  {
+    "Headline": "Closure - St Joseph's School, Reading",
+    "Date": "16 June 2026",
+    "Info": "The Catholic independent school is under serious threat of shutting its doors on 10 July due to declining pupil numbers and operational costs, leaving parents and staff fighting to secure its future.",
+    "Link": "https://www.readingchronicle.co.uk/news/families-renew-fight-to-save-st-josephs-school-in-reading"
+  },
+  {
+    "Headline": "Merger - Soho Parish Primary School (State), Westminster",
+    "Date": "16 June 2026",
+    "Info": "A legal challenge has been launched by a parent governor over their exclusion from a key meeting regarding the potential merger of Soho Parish Primary School, which is facing serious financial challenges due to falling pupil rolls.",
+    "Link": "https://www.fitzrovianews.com/legal-challenge-by-parent-governor-over-soho-school-merger-plans"
+  },
+  {
+    "Headline": "Merger - Saltney Ferry Community Primary School (State), Flintshire",
+    "Date": "16 June 2026",
+    "Info": "Flintshire County Council has reopened a statutory consultation into controversial plans to close Saltney Ferry Community Primary School and merge it with Saltney Wood Memorial Primary School.",
+    "Link": "https://www.deeside.com/flintshire-council-reopens-consultation-on-controversial-catholic-school-closure-and-merger-plans"
+  },
+  {
+    "Headline": "Merger - St Gabriel's School, Newbury",
+    "Date": "16 June 2026",
+    "Info": "St Gabriel's School has announced it will join the Mill Hill Education Group in a charitable merger, allowing the independent day school to gain long-term financial stability while retaining its identity.",
+    "Link": "https://www.basingstokegazette.co.uk/news/st-gabriels-school-in-newbury-joins-education-group"
+  },
+  {
+    "Headline": "Merger - Abingdon School and The Manor Prep, Oxfordshire",
+    "Date": "16 June 2026",
+    "Info": "Abingdon School has officially joined forces with Abingdon Prep School and The Manor Prep to form the Abingdon Schools Group, a merger aimed at consolidating their educational offering.",
+    "Link": "https://www.oxfordmail.co.uk/news/uk-private-school-is-now-placed-in-elite-group"
+  },
+  {
     "Headline": "Closure - Hove Park School (State), Brighton and Hove",
     "Date": "15 June 2026",
     "Info": "Brighton and Hove City Council has published a formal proposal to close the Valley Campus of Hove Park School by August 2028, which would consolidate all pupils onto the Nevill Campus.",
