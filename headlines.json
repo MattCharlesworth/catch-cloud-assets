@@ -1,5 +1,29 @@
 [
   {
+    "Headline": "Closure - Diseworth Church of England Primary School (State), Leicestershire",
+    "Date": "22 June 2026",
+    "Info": "Governors have voted to close Diseworth Church of England Primary School at the end of the current academic year following a significant loss of staff, leaving the school without teachers for the upcoming term.",
+    "Link": "https://www.leicestershire.gov.uk/news/reassurance-given-as-primary-school-announces-closure"
+  },
+  {
+    "Headline": "Merger - Highclare School, Birmingham",
+    "Date": "22 June 2026",
+    "Info": "Highclare School has announced the closure of its Woodfield preparatory site in Wylde Green, merging it with its St Paul's site in Sutton Coldfield over the next 18 months, with the introduction of VAT on fees cited as a key factor.",
+    "Link": "https://www.birminghammail.co.uk/news/midlands-news/birmingham-school-shut-sutton-coldfield-29394857"
+  },
+  {
+    "Headline": "Closure - Rendcomb College, Gloucestershire",
+    "Date": "21 June 2026",
+    "Info": "Rendcomb College, an independent day and boarding school established in 1920, has confirmed it will permanently close at the end of the academic year, blaming the introduction of a VAT levy on private schools and rising costs.",
+    "Link": "https://www.swindonadvertiser.co.uk/news/24398765.update-cotswolds-private-school-shutting-amid-vat-hike/"
+  },
+  {
+    "Headline": "Merger - Catholic Primary Schools and St Richard Gwyn High School (State), Flintshire",
+    "Date": "21 June 2026",
+    "Info": "Flintshire County Council and the Diocese of Wrexham have relaunched a statutory consultation to close three Catholic primary schools and one high school, replacing them with a £55 million 3-18 Catholic super-school.",
+    "Link": "https://nation.cymru/news/council-relaunches-controversial-school-closure-consultations/"
+  },
+  {
     "Headline": "Closure - St Gerard's School, Bangor",
     "Date": "16 June 2026",
     "Info": "St Gerard's School, a historic independent school in North Wales, has announced its permanent closure at the end of the current term due to sustained financial pressures, including the introduction of VAT on fees and the loss of charitable status.",
@@ -40,17 +64,5 @@
     "Date": "16 June 2026",
     "Info": "Abingdon School has officially joined forces with Abingdon Prep School and The Manor Prep to form the Abingdon Schools Group, a merger aimed at consolidating their educational offering.",
     "Link": "https://www.oxfordmail.co.uk/news/uk-private-school-is-now-placed-in-elite-group"
-  },
-  {
-    "Headline": "Closure - Hove Park School (State), Brighton and Hove",
-    "Date": "15 June 2026",
-    "Info": "Brighton and Hove City Council has published a formal proposal to close the Valley Campus of Hove Park School by August 2028, which would consolidate all pupils onto the Nevill Campus.",
-    "Link": "https://www.theargus.co.uk/news/hove-park-school-valley-campus-faces-closure-proposal"
-  },
-  {
-    "Headline": "News - Croscombe C of E Primary School (State), Somerset",
-    "Date": "15 June 2026",
-    "Info": "The Wessex Learning Trust and school leaders have issued a public statement to reassure families that recent rumours regarding the potential closure of the school are completely unfounded.",
-    "Link": "https://wells.nub.news/news/local-news/croscombe-school-reassures-families-over-its-future"
   }
 ]
