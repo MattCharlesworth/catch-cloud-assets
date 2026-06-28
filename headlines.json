@@ -1,5 +1,17 @@
 [
   {
+    "Headline": "Closure - Alderley Edge School for Girls, Cheshire",
+    "Date": "27 June 2026",
+    "Info": "Alderley Edge School for Girls has closed with immediate effect after bosses claimed the building is unsafe, with the site now presenting potential for redevelopment.",
+    "Link": "https://www.manchestereveningnews.co.uk/news/greater-manchester-news/parents-and-children-devastated-as-alderley-edge-school-for-girls-closes-with-immediate-effect"
+  },
+  {
+    "Headline": "Closure - Diseworth Church of England Primary School (State), Leicestershire",
+    "Date": "27 June 2026",
+    "Info": "A top Leicestershire education chief has officially defended the upcoming closure of Diseworth C of E Primary School, stating it was not financially viable to keep open due to falling pupil numbers and a large deficit.",
+    "Link": "https://www.leicestermercury.co.uk/news/local-news/top-leicestershire-education-boss-says-school-isnt-financially-viable-as-it-faces-closure"
+  },
+  {
     "Headline": "Closure - Pitsford School, Northamptonshire",
     "Date": "26 June 2026",
     "Info": "Pitsford School, an independent school for pupils aged four to 18, has announced it will permanently close on 10 July 2026 due to severe financial pressures [4.1.1]. The headteacher cited the introduction of VAT on fees, increased wages, and wider economic uncertainty as key factors.",
@@ -16,17 +28,5 @@
     "Date": "22 June 2026",
     "Info": "Highclare School has announced the closure of its Woodfield preparatory site in Wylde Green, merging it with its St Paul's site in Sutton Coldfield over the next 18 months, with the introduction of VAT on fees cited as a key factor.",
     "Link": "https://www.birminghammail.co.uk/news/midlands-news/birmingham-school-shut-sutton-coldfield-29394857"
-  },
-  {
-    "Headline": "Closure - Rendcomb College, Gloucestershire",
-    "Date": "21 June 2026",
-    "Info": "Rendcomb College, an independent day and boarding school established in 1920, has confirmed it will permanently close at the end of the academic year, blaming the introduction of a VAT levy on private schools and rising costs.",
-    "Link": "https://www.swindonadvertiser.co.uk/news/24398765.update-cotswolds-private-school-shutting-amid-vat-hike/"
-  },
-  {
-    "Headline": "Merger - Catholic Primary Schools and St Richard Gwyn High School (State), Flintshire",
-    "Date": "21 June 2026",
-    "Info": "Flintshire County Council and the Diocese of Wrexham have relaunched a statutory consultation to close three Catholic primary schools and one high school, replacing them with a £55 million 3-18 Catholic super-school.",
-    "Link": "https://nation.cymru/news/council-relaunches-controversial-school-closure-consultations/"
   }
 ]
