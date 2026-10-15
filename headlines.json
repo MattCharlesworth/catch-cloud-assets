@@ -1,5 +1,11 @@
 [
   {
+    "Headline": "Closure - King Solomon High School (State), London",
+    "Date": "15 October 2026",
+    "Info": "King Solomon High School is currently consulting on a potential closure at the end of the academic year due to falling pupil numbers, prompting some students to transfer early to Yavneh College.",
+    "Link": "https://www.thejc.com/family-and-education/yavneh-to-accept-pupils-from-king-solomon-after-half-term"
+  },
+  {
     "Headline": "Merger - Chiltern Learning Trust and IFTL (State), Bedfordshire and Milton Keynes",
     "Date": "9 October 2026",
     "Info": "Chiltern Learning Trust and Inspiring Futures through Learning (IFTL) are preparing to merge into a new 43-school academy trust, prompting Chiltern CEO Adrian Rogers to announce his departure at the end of the current academic year.",
@@ -10,11 +16,5 @@
     "Date": "9 October 2026",
     "Info": "Aberdeenshire Council is launching a consultation that could result in the permanent closure of Burnhaven School in Peterhead, as the state primary's roll has fallen to just 11 pupils.",
     "Link": "https://www.aberdeenlive.news/news/aberdeen-news/peterhead-school-facing-closure-consultation-10888079"
-  },
-  {
-    "Headline": "Financial - Portsmouth Schools (State), Hampshire",
-    "Date": "8 October 2026",
-    "Info": "Portsmouth's state schools are facing a £1.05 million funding gap driven by rising special educational needs costs and a greater reliance on independent sector placements, putting significant pressure on the council's education budget.",
-    "Link": "https://www.v2radio.co.uk/news/local-news/over-1m-deficit-in-portsmouth-schools-budget/"
   }
 ]
